@@ -1,0 +1,19 @@
+// Default layout file that is supposed to be a common part for all of the layouts.
+//
+// HERE YOU SHOULD:
+// - Import global variables here like colors, breakpoints etc.
+// - Import global vendor libraries like normalize.css, bootstrap etc.
+//
+// HERE YOU SHOULD NOT:
+// - Import components that you think will be used on every page(Webpack takes care of that).
+// - Import mixins that are used by some of the components.
+// - Import vendor libraries' styles that are used by some of the components e.g. Swiper etc.
+
+// Variables
+
+@import 'config/breakpoints';
+
+// Vendors
+
+@import 'normalize.css/normalize';
+@import 'include-media/dist/include-media';

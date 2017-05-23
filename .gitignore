@@ -1,0 +1,22 @@
+# Exclude local build artefacts
+dist/*
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Exclude OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Exclude misc.
+src/__*/
+.htaccess
+.idea/
+_reports
+files-assets/
+.vscode/
