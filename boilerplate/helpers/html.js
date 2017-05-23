@@ -19,7 +19,7 @@ module.exports = config => {
     const minifier = require('html-minifier').minify;
     minify = (file, cb) => {
       file.contents = new Buffer(
-        minifier(file.contents.toString(), config.minifierOptions)
+        minifier(file.contents.toString(), config.htmlMinifier)
       );
       cb(null, file);
     };
