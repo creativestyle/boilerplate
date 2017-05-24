@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "init": "npm init && node boilerplate/scripts/init.js",
+    "setup": "npm init && node boilerplate/scripts/setup.js",
     "upgrade": "node boilerplate/scripts/upgrade.js",
     "html": "node boilerplate/scripts/html.js",
     "copy": "node boilerplate/scripts/copy.js",
@@ -12,11 +12,11 @@
     "stylefmt": "stylefmt --recursive \"src/**/*.{css,scss}\"",
     "lint": "run-p --silent eslint stylefmt",
     "webpack": "webpack --config webpack.config.js --progress",
-    "watch": "run-p --silent browsersync build",
+    "watch": "run-p --silent browsersync build:dev",
     "clean": "node boilerplate/scripts/clean.js",
-    "prebuild": "npm run clean --silent",
-    "build": "run-p --silent webpack html images copy twig svgSprite",
-    "build:prod": "cross-env NODE_ENV=production npm run build --silent",
+    "prebuild:dev": "npm run clean --silent",
+    "build:dev": "run-p --silent webpack html images copy twig svgSprite",
+    "build": "cross-env NODE_ENV=production npm run build:dev --silent",
     "preserve": "npm run clean --silent",
     "serve": "cross-env WATCH=true npm run watch --silent",
     "serve:prod": "cross-env NODE_ENV=production npm run serve --silent",
