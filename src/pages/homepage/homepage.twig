@@ -1,0 +1,17 @@
+{% embed '../../layouts/default/default.twig' with { 'title': 'Homepage' } %}
+
+{% block styles %}
+  {{ parent() }}
+  <link rel="stylesheet" href="/pages/homepage/homepage.css">
+{% endblock %}
+
+{% block content %}
+  Homepage content.
+{% endblock %}
+
+{% block scripts %}
+  {{ parent() }}
+  <script src="/pages/homepage/homepage.js"></script>
+{% endblock %}
+
+{% endembed %}

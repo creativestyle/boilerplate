@@ -5,7 +5,7 @@ const project = require('../project');
 const twig = require('../helpers/twig');
 
 const isWatching = Boolean(process.env.WATCH);
-
+console.log(isWatching);
 /**
  * Supported options which can be provided in project.config.js file are:
  * - files {string|array} Glob pattern or array of them.

@@ -1,1 +1,1 @@
-import './default.scss';
+import 'normalize.css/normalize';
