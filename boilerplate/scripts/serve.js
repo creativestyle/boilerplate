@@ -1,3 +1,5 @@
+'use strict';
+
 const browserSync = require('browser-sync');
 const project = require('../project');
 const logger = require('../logger');
