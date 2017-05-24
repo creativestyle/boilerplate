@@ -21,7 +21,8 @@
     "serve": "cross-env WATCH=true npm run watch --silent",
     "serve:prod": "cross-env NODE_ENV=production npm run serve --silent",
     "start": "npm run serve --silent",
-    "precommit": "npm run lint --silent"
+    "precommit": "npm run lint --silent",
+    "test": "npm run build"
   },
   "devDependencies": {
     "autoprefixer": "^7.0.1",

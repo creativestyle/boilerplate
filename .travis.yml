@@ -19,4 +19,4 @@ after_script: greenkeeper-lockfile-upload
 
 # Actual testing scritps.
 script:
-  - yarn run build
+  - yarn test
