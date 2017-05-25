@@ -47,7 +47,7 @@ module.exports = {
         exclude: /(node_modules)/,
         use: [
           {
-            loader: 'babel-loader', // Check "babel" key in package.json for babel configuration.
+            loader: 'babel-loader', // Check .babelrc file for babel configuration.
           },
         ],
       },

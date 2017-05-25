@@ -2,9 +2,10 @@
  * Boilerplate main configuration file. For more detailed information
  * regarding configuration and tasks see boilerplate/README.md file.
  */
+const path = require('path');
 
-const src = `src`; // Sources directory path relative to this file.
-const dest = `dist`; // Destination directory path relative to this file.
+const src = path.resolve('src'); // Sources directory path relative to this file.
+const dest = path.resolve('dist'); // Destination directory path relative to this file.
 
 module.exports = {
   html: {
@@ -31,7 +32,12 @@ module.exports = {
   twig: {
     // Compiles Twig templates.
     files: `${src}/pages/**/*.twig`,
+    watchedFiles: [
+      `${src}/pages/**/*.twig`,
+      `${src}/pages/**/*.data.{js,json}`, // Watch also data files change.
+    ],
     dest: `${dest}/pages`,
+    base: src,
   },
   clean: {
     // Deletes files.

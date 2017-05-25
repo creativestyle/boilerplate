@@ -6,11 +6,13 @@ module.exports = {
     node: true,
   },
   extends: ['eslint:recommended', 'prettier'],
+  parser: 'babel-eslint',
   parserOptions: {
     ecmaFeatures: {
       experimentalObjectRestSpread: true,
       jsx: true,
     },
+    allowImportExportEverywhere: true,
     sourceType: 'module',
   },
   plugins: ['prettier'],

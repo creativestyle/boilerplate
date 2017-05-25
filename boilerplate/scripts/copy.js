@@ -19,11 +19,13 @@ const config = Object.assign(
   },
   project.getConfig().copy
 );
-
-copy(config);
+// Watch patterns provided in "files" property by default.
+config.watchedFiles = config.watchedFiles ? config.watchedFiles : config.files;
 
 if (config.watch) {
-  chokidar.watch(config.files).on('all', () => {
+  chokidar.watch(config.watchedFiles).on('all', () => {
     copy(config);
   });
+} else {
+  copy(config);
 }

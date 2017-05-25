@@ -4,7 +4,6 @@ const winston = require('winston');
 const config = require('./project').getConfig('logger');
 
 const isWatching = Boolean(process.env.WATCH);
-const isTest = process.env.NODE_ENV === 'test';
 
 // Configuration for project's logger.
 const logger = new winston.Logger({
@@ -16,7 +15,6 @@ const logger = new winston.Logger({
        */
       level: config && config.logLevel ? config.logLevel : 'info',
       colorize: 'all',
-      silent: isTest || isWatching,
       timestamp: () => {
         // Show nice timestamp for every log.
         const date = new Date();

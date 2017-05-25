@@ -23,9 +23,11 @@ const config = Object.assign(
   },
   project.getConfig().svgSprite
 );
-
-svgSprite(config);
+// Watch patterns provided in "files" property by default.
+config.watchedFiles = config.watchedFiles ? config.watchedFiles : config.files;
 
 if (config.watch) {
-  chokidar.watch(config.files).on('all', () => svgSprite(config));
+  chokidar.watch(config.watchedFiles).on('all', () => svgSprite(config));
+} else {
+  svgSprite(config);
 }
