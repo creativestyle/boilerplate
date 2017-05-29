@@ -3,7 +3,7 @@
 This is the documentation about project based on frontend boilerplate.
 
 If you would like to get
-more information about boilerplate itself head to `boilerplate/README.md` file.
+more information about boilerplate itself head to [boilerplate/README.md](https://github.com/creativestyle/boilerplate/blob/master/boilerplate/README.md) file.
 
 ## Getting started
 ### Requirements
@@ -12,7 +12,7 @@ more information about boilerplate itself head to `boilerplate/README.md` file.
 ### Installation
 Download or clone the repository into desired directory:
 ```bash
-git clone https://github.com/creativestyle/boilerplate.git my-project-name
+git clone https://github.com/creativestyle/boilerplate.git your-project-name
 ```
 Install dependencies:
 ```bash
@@ -41,15 +41,15 @@ The page will reload if you make edits, **it will also inject styles once you ch
 
 Builds the app for production to the `dist` folder.<br>
 It will do the following optimizations:
-* JavaScript bundling, spliting and minifying using Webpack.
+* JavaScript bundling, splitting and minifying using Webpack.
 * Sass + PostCSS compilation with minification.
 * Twig templates compilation.
 * HTML copying and minifying.
 * Images copying and minifying.
 * SVG sprites generation and minification.
-* Copying of .WOFF, .WOFF2, .TTF, .JSON, .ICO, .PHP, .PHTML, .CSV, .XML files.
+* Copying of `.WOFF`, `.WOFF2`, `.TTF`, `.JSON`, `.ICO`, `.PHP`, `.PHTML`, `.CSV`, `.XML` files.
 
 Your app is ready to be deployed from the `dist` folder.
 
 ## Configuration
-There are many options supported by the boilerplate which can be configured. For more information head to `boilerplate/README.md` file.
+There are many options supported by the boilerplate which can be configured. For more information head to [boilerplate/README.md](https://github.com/creativestyle/boilerplate/blob/master/boilerplate/README.md) file file.
