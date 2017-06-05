@@ -3,8 +3,10 @@
 const SVGSpriter = require('svg-sprite');
 
 const map = require('map-stream');
-const Vinyl = require('vinyl');
 const vfs = require('vinyl-fs');
+const mkdirp = require('mkdirp');
+const fs = require('fs');
+const path = require('path');
 
 const logger = require('../logger');
 
@@ -12,20 +14,15 @@ const logger = require('../logger');
  * Compiles SVG sprite out of provided SVGs.
  *
  * @param {config} Configuration object.
- * @return {stram} Stream produced by vinyl-fs.
+ * @return {stream} Stream produced by vinyl-fs.
  */
 module.exports = config => {
   logger.info('Compiling SVG sprite...');
 
   const spriter = new SVGSpriter(config);
 
-  let firstFile = true;
   const addToSprite = (file, cb) => {
     spriter.add(file);
-    if (firstFile) {
-      firstFile = false;
-      cb(null, null);
-    }
     cb();
   };
 
@@ -34,7 +31,7 @@ module.exports = config => {
       if (error) {
         logger.error(error);
       }
-
+      console.log(result.defs.sprite.contents.pipe);
       cb(
         null,
         new Vinyl({
@@ -45,9 +42,18 @@ module.exports = config => {
     });
   };
 
-  return vfs
-    .src(config.files)
-    .pipe(map(addToSprite))
-    .pipe(map(compileSprite))
-    .pipe(vfs.dest(config.dest));
+  return vfs.src(config.files).pipe(map(addToSprite)).on('end', () => {
+    spriter.compile((error, result) => {
+      if (error) {
+        logger.error(error);
+      }
+      mkdirp.sync(config.dest);
+
+      // Write the generated resource to disk
+      fs.writeFileSync(
+        path.join(config.dest, config.spriteName),
+        result.defs.sprite.contents
+      );
+    });
+  });
 };
