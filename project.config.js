@@ -33,8 +33,8 @@ module.exports = {
     // Compiles Twig templates.
     files: `${src}/pages/**/*.twig`,
     watchedFiles: [
-      `${src}/pages/**/*.twig`,
-      `${src}/pages/**/*.data.{js,json}`, // Watch also data files change.
+      `${src}/**/*.twig`,
+      `${src}/**/*.data.{js,json}`, // Watch also data files change.
     ],
     dest: `${dest}/pages`,
     base: src,
