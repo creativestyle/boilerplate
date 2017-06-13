@@ -6,6 +6,7 @@ const env = process.env.NODE_ENV;
 const isProduction = env === 'production';
 
 module.exports = {
+  watch: Boolean(process.env.WATCH),
   entry: {
     'pages/homepage/homepage': './src/pages/homepage/homepage.js',
   },
@@ -77,10 +78,10 @@ module.exports = {
               loader: 'sass-loader',
               options: {
                 // S(CSS) files can also be imported relatively to directories below.
-                includePaths: [
-                  path.resolve('src'),
-                  path.resolve('node_modules'),
-                ],
+                // includePaths: [
+                //   path.resolve('src'),
+                //   path.resolve('node_modules'),
+                // ],
                 sourceMap: !isProduction,
                 sourceMapContents: true,
                 outputStyle: 'expanded',
