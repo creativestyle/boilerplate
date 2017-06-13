@@ -26,22 +26,6 @@ module.exports = config => {
     cb();
   };
 
-  const compileSprite = (file, cb) => {
-    spriter.compile((error, result) => {
-      if (error) {
-        logger.error(error);
-      }
-      console.log(result.defs.sprite.contents.pipe);
-      cb(
-        null,
-        new Vinyl({
-          path: config.spriteName,
-          contents: result.defs.sprite.contents,
-        })
-      );
-    });
-  };
-
   return vfs.src(config.files).pipe(map(addToSprite)).on('end', () => {
     spriter.compile((error, result) => {
       if (error) {
