@@ -60,7 +60,7 @@
     "replace-ext": "^1.0.0",
     "sass-loader": "^6.0.5",
     "simple-git": "^1.73.0",
-    "style-loader": "^0.18.1",
+    "style-loader": "^0.20.1",
     "stylefmt": "^6.0.0",
     "stylelint": "^7.10.1",
     "stylelint-config-standard": "^17.0.0",
