@@ -25,7 +25,7 @@
     "test": "npm run build"
   },
   "devDependencies": {
-    "autoprefixer": "^7.0.1",
+    "autoprefixer": "^9.0.2",
     "babel-core": "^6.24.1",
     "babel-eslint": "^7.2.3",
     "babel-loader": "^7.0.0",
