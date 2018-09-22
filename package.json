@@ -38,7 +38,7 @@
     "cssnano": "^3.10.0",
     "del": "^3.0.0",
     "eslint": "^4.0.0",
-    "eslint-config-prettier": "^2.0.0",
+    "eslint-config-prettier": "^3.1.0",
     "eslint-plugin-prettier": "^2.0.1",
     "extract-text-webpack-plugin": "^2.1.0",
     "html-minifier": "^3.4.4",
