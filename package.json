@@ -44,7 +44,7 @@
     "html-minifier": "^3.4.4",
     "husky": "^0.14.0",
     "imagemin": "^5.2.2",
-    "imagemin-gifsicle": "^5.1.0",
+    "imagemin-gifsicle": "^6.0.0",
     "imagemin-jpegtran": "^5.0.2",
     "imagemin-optipng": "^5.2.1",
     "imagemin-svgo": "^5.2.1",
