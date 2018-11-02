@@ -45,7 +45,7 @@
     "husky": "^0.14.0",
     "imagemin": "^5.2.2",
     "imagemin-gifsicle": "^5.1.0",
-    "imagemin-jpegtran": "^5.0.2",
+    "imagemin-jpegtran": "^6.0.0",
     "imagemin-optipng": "^5.2.1",
     "imagemin-svgo": "^5.2.1",
     "lodash.debounce": "^4.0.8",
